@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { portfolioData } from "@/data/portfolio";
 import Image from "next/image";
-import { Github, Linkedin, ArrowUpRight, ArrowDown, FileDown } from "lucide-react";
+import { FileDown } from "lucide-react";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -57,7 +57,6 @@ export function Hero() {
     return () => ctx.revert();
   }, []);
 
-  const project = portfolioData.projects[0]; // Featured project
 
   return (
     <section id="hero" className="relative min-h-screen mt-20 flex items-center justify-center p-4 md:p-8 bg-[#0a0a0f] overflow-hidden pt-24 perspective-1000">
@@ -124,48 +123,59 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right Section: Project Feature */}
+        {/* Right Section: Skills Preview */}
         <div className="w-full lg:w-[35%] p-8 md:p-14 z-10 flex flex-col justify-center bg-[#111111] relative">
-
           <div className="hero-anim max-w-sm lg:pr-8">
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-bold text-white">{project.title}</h3>
-              <div className="flex gap-2">
-                <a href={project.liveUrl || project.github} target="_blank" rel="noreferrer" className="text-[#FB4D03] hover:text-[#d64303] transition-colors">
-                  <ArrowUpRight className="w-5 h-5" />
-                </a>
-                <a href="#projects" className="text-[#FB4D03] hover:text-[#d64303] transition-colors">
-                  <ArrowDown className="w-5 h-5" />
-                </a>
-              </div>
+            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+              <span className="w-8 h-px bg-[#FB4D03]"></span>
+              Core Stack
+            </h3>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {portfolioData.skills.slice(0, 9).map((skill, index) => {
+                const iconMap: Record<string, string> = {
+                  react: "⚛️",
+                  nodejs: "🟢",
+                  express: "⚡",
+                  mongodb: "🍃",
+                  javascript: "🟨",
+                  tailwind: "🎨",
+                  aws: "☁️",
+                  git: "📦",
+                  nextjs: "▲",
+                  postgresql: "🐘",
+                  typescript: "🔷",
+                  redux: "🔄",
+                };
+                return (
+                  <div
+                    key={index}
+                    className="hero-card group p-3 rounded-xl bg-white/5 border border-white/5 hover:border-[#FB4D03]/30 hover:bg-[#FB4D03]/5 transition-all duration-300 flex flex-col items-center justify-center gap-1.5"
+                  >
+                    <span className="text-xl group-hover:scale-110 transition-transform duration-300">
+                      {iconMap[skill.icon] || "💻"}
+                    </span>
+                    <span className="text-[10px] font-bold text-gray-500 group-hover:text-white transition-colors uppercase tracking-tight text-center">
+                      {skill.name}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
 
-            <p className="text-sm text-gray-400 leading-relaxed mb-8">
-              {portfolioData.personal.name.split(" ")[0]} worked as a developer on {project.title}, {project.description.substring(0, 100)}...
-            </p>
-
-            <div className="flex flex-wrap items-center gap-4">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition-colors"
-              >
-                <Github className="w-4 h-4" />
-                GitHub
-              </a>
-              <a
-                href={portfolioData.personal.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#FB4D03]/30 text-[#FB4D03] text-sm hover:bg-[#FB4D03]/10 transition-colors"
-              >
-                <Linkedin className="w-4 h-4" />
-                LinkedIn
-              </a>
+            <div className="mt-12 flex items-center gap-6">
+              <div className="flex -space-x-3">
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-[#111111] bg-[#1a1a1e] flex items-center justify-center overflow-hidden">
+                    <div className="w-full h-full bg-gradient-to-br from-[#FB4D03]/20 to-transparent" />
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-gray-400">
+                <span className="text-white font-bold">1.5+ Years</span> <br /> of Experience
+              </p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
