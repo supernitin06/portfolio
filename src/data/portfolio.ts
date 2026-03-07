@@ -62,7 +62,7 @@ export const portfolioData = {
       description:
         "Real-time food delivery web application managing the complete order lifecycle. Features secure RBAC for Admin, Customer, and Delivery Partners, live location tracking via WebSockets, and WhatsApp notifications. Deployed a scalable backend on Render.",
       github: "https://github.com/supernitin06",
-      liveUrl: "https://restro-83kb.vercel.app/this",
+      liveUrl: "https://restro-83kb.vercel.app/login",
       technologies: [
         "Node.js",
         "Express.js",
@@ -79,8 +79,7 @@ export const portfolioData = {
       description:
         "Built the KalaSquare platform where influencers register, users buy tickets, and sponsors hire influencers. Developed full-stack features using React.js, Next.js, Node.js, Express.js, PostgreSQL, and AWS, including secure authentication with JWT and bcrypt, payment integration, real-time communication with Socket.IO.",
       github: "https://github.com/supernitin06",
-      liveUrl:
-        "https://vercel.com/supernitin06s-projects/kalasquare/3CwxwcCkq7eMv71HK4jVugh8w33Z",
+      liveUrl: "https://kalasquare-three.vercel.app/",
       technologies: [
         "React.js",
         "Next.js",
