@@ -57,7 +57,7 @@ export function Testimonials() {
                     {portfolioData.testimonials.map((testim, i) => (
                         <div key={i} className="testim-card relative glass p-8 md:p-10 rounded-3xl border border-white/5 bg-white/5">
                             <Quote className="absolute top-8 right-8 w-12 h-12 text-white/5" />
-                            <p className="text-lg text-gray-300 italic mb-8 relative z-10">"{testim.content}"</p>
+                            <p className="text-lg text-gray-300 italic mb-8 relative z-10">&quot;{testim.content}&quot;</p>
 
                             <div className="flex items-center gap-4">
                                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FB4D03] to-[#d64303] flex items-center justify-center font-bold text-white text-xl">

@@ -32,10 +32,31 @@ export function Contact() {
     return () => ctx.revert();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${portfolioData.personal.email}`, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        (e.target as HTMLFormElement).reset();
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        alert("Oops! There was a problem submitting your form. Please try again.");
+      }
+    } catch (error) {
+      alert("Oops! There was a problem submitting your form. Please try again.");
+    }
   };
 
   return (
@@ -115,7 +136,7 @@ export function Contact() {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-2">Send a Message</h3>
-                  <p className="text-gray-400">Fill out the form below and I'll get back to you shortly.</p>
+                  <p className="text-gray-400">Fill out the form below and I&apos;ll get back to you shortly.</p>
                 </div>
 
                 <div className="space-y-6">
@@ -123,6 +144,7 @@ export function Contact() {
                     <label className="block text-sm font-bold text-gray-300 mb-3 ml-1 uppercase tracking-wider">Your Name</label>
                     <input
                       type="text"
+                      name="name"
                       required
                       className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-[#FB4D03] focus:ring-1 focus:ring-[#FB4D03] transition-all"
                       placeholder="John Doe"
@@ -133,6 +155,7 @@ export function Contact() {
                     <label className="block text-sm font-bold text-gray-300 mb-3 ml-1 uppercase tracking-wider">Email Address</label>
                     <input
                       type="email"
+                      name="email"
                       required
                       className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-[#FB4D03] focus:ring-1 focus:ring-[#FB4D03] transition-all"
                       placeholder="john@example.com"
@@ -142,6 +165,7 @@ export function Contact() {
                   <div>
                     <label className="block text-sm font-bold text-gray-300 mb-3 ml-1 uppercase tracking-wider">Your Message</label>
                     <textarea
+                      name="message"
                       required
                       rows={5}
                       className="w-full px-5 py-4 rounded-2xl bg-black/40 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-[#FB4D03] focus:ring-1 focus:ring-[#FB4D03] transition-all resize-none"
