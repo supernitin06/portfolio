@@ -70,10 +70,14 @@ export function Navbar() {
           <div className="hidden md:flex items-center">
             <a
               href={portfolioData.personal.resumeUrl}
-              download
-              className="px-5 py-2.5 rounded-full bg-[#FB4D03] hover:bg-[#d64303] text-white text-sm font-bold tracking-wide transition-all hover:scale-105 shadow-[0_0_20px_rgba(240,138,140,0.3)]"
+              download="Nitin_Chauhan_Resume.pdf"
+              className="px-5 py-2.5 rounded-full bg-[#FB4D03] hover:bg-[#d64303] text-white text-sm font-bold tracking-wide transition-all hover:scale-105 shadow-[0_0_20px_rgba(251,77,3,0.35)] relative overflow-hidden group"
             >
-              Resume
+              <span className="relative z-10 flex items-center gap-1.5">
+                <span>Resume</span>
+                <span className="text-xs opacity-75">PDF</span>
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
             </a>
           </div>
 
@@ -104,10 +108,10 @@ export function Navbar() {
           ))}
           <a
             href={portfolioData.personal.resumeUrl}
-            download
-            className="mt-4 px-8 py-3 rounded-full bg-[#FB4D03] text-white text-lg font-bold shadow-[0_0_30px_rgba(240,138,140,0.4)]"
+            download="Nitin_Chauhan_Resume.pdf"
+            className="mt-4 px-8 py-3 rounded-full bg-[#FB4D03] text-white text-lg font-bold shadow-[0_0_30px_rgba(251,77,3,0.4)]"
           >
-            Download Resume
+            Download Resume (PDF)
           </a>
         </div>
       </div>

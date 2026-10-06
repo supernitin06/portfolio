@@ -1,22 +1,22 @@
 export const portfolioData = {
   personal: {
     name: "Nitin Chauhan",
-    title: "Full Stack MERN Developer",
+    title: "Software Developer | SharePoint • React • Node.js • AWS",
     email: "dev.nitin2024@gmail.com",
     phone: "+91-8285510025",
     avatar: "/images/avatar.jpg",
     github: "https://github.com/supernitin06",
     linkedin: "https://www.linkedin.com/in/nitin-chauhan-8b7388295/",
-    resumeUrl: "https://nitin-chauhan-resume-final-layout.tiiny.site/",
+    resumeUrl: "/Nitin_Chauhan_Resume.pdf",
   },
   summary:
-    "Highly motivated B.Tech Computer Science graduate with 1.5+ years of experience in full-stack Web development and a keen interest in deep learning. Skilled in modern frameworks and technologies, committed to continuous learning and staying updated with the latest advancements. Strong analytical and problem-solving abilities with effective communication and teamwork skills.",
+    "Full Stack Developer with 1.5+ years building secure, scalable SaaS and enterprise platforms. Expert in SharePoint Environment, React, Node.js, AWS, and Microsoft 365. Delivered 30%+ performance improvements through optimization and API design. Passionate about building high-quality digital experiences that solve real business problems.",
   education: [
     {
-      degree: "B. Tech",
+      degree: "B. Tech in Computer Science",
       institution: "Amity University Noida",
-      year: "2024",
-      score: "7.08 CGPA",
+      year: "2020 – 2024",
+      score: "7.08 CGPA | Top 10% of Batch",
     },
     {
       degree: "12th",
@@ -33,25 +33,43 @@ export const portfolioData = {
   ],
   experience: [
     {
-      title: "MERN Stack Developer",
-      company: "Bitmax Group Private Limited",
-      period: "Dec 2025 – Present",
+      title: "Software Developer",
+      company: "Smalsus Infolab Pvt. Ltd.",
+      location: "Noida",
+      period: "Apr 2025 – Present",
       description:
-        "MERN Stack Developer with hands-on experience in building scalable full-stack applications using MongoDB, Express.js, React.js, and Node.js. Skilled in developing secure RESTful APIs, authentication, role-based access control (RBAC), and frontend–backend integration. Experienced with Redux, Git, and Swagger for efficient state management, version control, and API documentation.",
+        "Designed and developed enterprise SharePoint solutions using SPFx framework with React and TypeScript for Microsoft 365 environments. Built AI-enabled interactive web parts and automated Power Automate workflows for business process automation and approvals. Configured site permissions and managed access control policies for SharePoint environments. Leveraged PnP PowerShell, CSOM, and Azure services for site provisioning, migration, and advanced customization.",
+      highlights: [
+        "Enterprise SharePoint solutions with SPFx + React + TypeScript",
+        "AI-enabled web parts & Power Automate workflow automation",
+        "PnP PowerShell, CSOM & Azure for site provisioning",
+      ],
+    },
+    {
+      title: "Full Stack Developer",
+      company: "LeadsConnect Services Pvt. Ltd.",
+      location: "Noida",
+      period: "Oct 2024 – Apr 2025",
+      description:
+        "Developed multi-tenant SaaS applications with RBAC, JWT/OAuth2 authentication, and Redis-based session management. Improved API performance by 30% through caching, query optimization, and lazy loading implementations. Integrated Razorpay payment gateway and deployed scalable solutions on AWS (EC2, RDS); mentored junior developers.",
+      highlights: [
+        "30% API performance improvement via caching & query optimization",
+        "Multi-tenant SaaS with RBAC, JWT/OAuth2 & Redis sessions",
+        "Razorpay integration & AWS (EC2, RDS) deployment",
+      ],
     },
     {
       title: "Software Developer",
       company: "Perfect Kode Software Technologies",
-      period: "Jan 2025 – Oct 2025",
+      location: "Noida",
+      period: "Sept 2024 – Oct 2024",
       description:
-        "Built scalable web apps using Next.js, React.js, Fast API, Laravel, Tailwind CSS, with focus on performance, API integration, and responsive UI.",
-    },
-    {
-      title: "Freelance Web Developer",
-      company: "Delhi Info Media",
-      period: "Aug 2024 – Dec 2024",
-      description:
-        "Worked as a freelance developer creating responsive websites and high-converting landing pages. Developed robust backend architectures, dynamic features, and RESTful APIs using Node.js.",
+        "Built full-stack web applications using Next.js, React.js, FastAPI, and Laravel across diverse client projects. Created responsive UI components using Tailwind CSS; integrated third-party APIs and optimized performance. Delivered client-focused solutions with improved user experience and application stability.",
+      highlights: [
+        "Full-stack apps with Next.js, React.js, FastAPI & Laravel",
+        "Responsive UI with Tailwind CSS & third-party API integrations",
+        "Performance optimization & client-focused delivery",
+      ],
     },
   ],
   projects: [
@@ -127,6 +145,23 @@ export const portfolioData = {
         "Swagger",
       ],
     },
+    {
+      title: "SDV Connect – University Collaboration Platform",
+      period: "2024",
+      image: "/images/sdv-connect-gen.png",
+      description:
+        "Developed a centralized university platform integrating academic and administrative services for students, mentors, and administrators. Implemented Role-Based Access Control (RBAC) for secure, role-specific access and workflows. Built real-time booking and collaboration features to improve resource utilization and communication.",
+      github: "https://github.com/supernitin06",
+      liveUrl: "#",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "PostgreSQL",
+        "RBAC",
+        "WebSockets",
+        "REST APIs",
+      ],
+    },
   ],
   skills: [
     { name: "React", icon: "react" },
@@ -134,13 +169,19 @@ export const portfolioData = {
     { name: "Express", icon: "express" },
     { name: "MongoDB", icon: "mongodb" },
     { name: "JavaScript", icon: "javascript" },
+    { name: "TypeScript", icon: "typescript" },
     { name: "Tailwind", icon: "tailwind" },
     { name: "AWS", icon: "aws" },
     { name: "Git", icon: "git" },
     { name: "Next.js", icon: "nextjs" },
     { name: "PostgreSQL", icon: "postgresql" },
-    { name: "TypeScript", icon: "typescript" },
     { name: "Redux", icon: "redux" },
+    { name: "SharePoint", icon: "sharepoint" },
+    { name: "SPFx", icon: "spfx" },
+    { name: "Power Automate", icon: "powerautomate" },
+    { name: "Azure", icon: "azure" },
+    { name: "Redis", icon: "redis" },
+    { name: "Docker", icon: "docker" },
   ],
   certifications: ["NPTEL Software Testing", "Full Stack Development (MERN)"],
   achievements: [
@@ -181,7 +222,7 @@ export const portfolioData = {
   faqs: [
     {
       question: "What technologies do you specialize in?",
-      answer: "I specialize in the MERN stack (MongoDB, Express.js, React.js, Node.js), Next.js, TypeScript, and modern styling libraries like Tailwind CSS.",
+      answer: "I specialize in the MERN stack, Next.js, TypeScript, and enterprise Microsoft 365 solutions including SharePoint (SPFx), Power Automate, PnP PowerShell, and Azure. I also have strong experience with AWS, Docker, PostgreSQL, and Redis.",
     },
     {
       question: "Are you available for freelance work?",

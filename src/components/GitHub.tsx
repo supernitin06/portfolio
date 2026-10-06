@@ -149,12 +149,18 @@ export function GitHub() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[#FB4D03]/10 to-transparent blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <h2 ref={titleRef} className="text-3xl md:text-5xl font-bold mb-16 text-center github-title">
-          <span className="text-white">GitHub </span>
-          <span className="text-[#FB4D03]">Activity</span>
-        </h2>
+        <div className="text-center mb-16 github-title">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="cyber-badge">
+              <span>🐙</span> OPEN SOURCE & CODE ACTIVITY
+            </span>
+          </div>
+          <h2 ref={titleRef} className="text-3xl md:text-5xl font-black text-white">
+            GitHub <span className="text-gradient">Activity</span> & Repos
+          </h2>
+        </div>
 
-        <div ref={cardRef} className="glass rounded-[2rem] p-8 md:p-12 border border-white/5 bg-[#111111]/80 backdrop-blur-xl">
+        <div ref={cardRef} className="glass rounded-[2rem] p-8 md:p-12 border border-white/10 bg-[#111116] backdrop-blur-xl">
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 mb-12 border-b border-white/5 pb-12">
 
             {/* Profile Section */}
@@ -285,6 +291,9 @@ export function GitHub() {
             )}
           </div>
         </div>
+
+        {/* ── Katana Sword Slash Divider ── */}
+        <div className="katana-divider mt-24" />
       </div>
     </section>
   );

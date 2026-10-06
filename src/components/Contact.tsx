@@ -118,8 +118,12 @@ export function Contact() {
 
             {/* Social & Resume */}
             <div className="flex flex-wrap gap-4">
-              <a href={portfolioData.personal.resumeUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-medium transition-all group">
-                <Download className="w-5 h-5 group-hover:-translate-y-1 transition-transform text-[#FB4D03]" /> Resume
+              <a
+                href={portfolioData.personal.resumeUrl}
+                download="Nitin_Chauhan_Resume.pdf"
+                className="sword-card flex-1 flex items-center justify-center gap-2 py-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#FB4D03]/40 text-white font-semibold transition-all group"
+              >
+                <Download className="w-5 h-5 group-hover:-translate-y-1 transition-transform text-[#FB4D03]" /> Download Resume
               </a>
               <a href={portfolioData.personal.github} target="_blank" rel="noopener noreferrer" className="w-[72px] h-[72px] flex items-center justify-center rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white transition-all">
                 <Github className="w-6 h-6 hover:text-[#FB4D03] transition-colors" />
