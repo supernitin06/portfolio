@@ -40,7 +40,7 @@ export function About() {
   const techs = [
     "React", "Next.js", "TypeScript", "Node.js",
     "SharePoint SPFx", "Power Automate", "Microsoft 365",
-    "AWS EC2", "Azure", "Redis", "Docker", "PostgreSQL",
+    "AWS EC2", "Azure", "PostgreSQL", "MongoDB",
   ];
 
   const highlights = [

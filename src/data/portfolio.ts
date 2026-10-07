@@ -36,7 +36,7 @@ export const portfolioData = {
       title: "Software Developer",
       company: "Smalsus Infolab Pvt. Ltd.",
       location: "Noida",
-      period: "Apr 2025 – Present",
+      period: "2026 – Present",
       description:
         "Designed and developed enterprise SharePoint solutions using SPFx framework with React and TypeScript for Microsoft 365 environments. Built AI-enabled interactive web parts and automated Power Automate workflows for business process automation and approvals. Configured site permissions and managed access control policies for SharePoint environments. Leveraged PnP PowerShell, CSOM, and Azure services for site provisioning, migration, and advanced customization.",
       highlights: [
@@ -51,10 +51,10 @@ export const portfolioData = {
       location: "Noida",
       period: "Oct 2024 – Apr 2025",
       description:
-        "Developed multi-tenant SaaS applications with RBAC, JWT/OAuth2 authentication, and Redis-based session management. Improved API performance by 30% through caching, query optimization, and lazy loading implementations. Integrated Razorpay payment gateway and deployed scalable solutions on AWS (EC2, RDS); mentored junior developers.",
+        "Developed multi-tenant SaaS applications with RBAC, JWT/OAuth2 authentication, and session management. Improved API performance by 30% through caching, query optimization, and lazy loading implementations. Integrated Razorpay payment gateway and deployed scalable solutions on AWS (EC2, RDS); mentored junior developers.",
       highlights: [
         "30% API performance improvement via caching & query optimization",
-        "Multi-tenant SaaS with RBAC, JWT/OAuth2 & Redis sessions",
+        "Multi-tenant SaaS with RBAC, JWT/OAuth2 & secure sessions",
         "Razorpay integration & AWS (EC2, RDS) deployment",
       ],
     },
@@ -74,13 +74,30 @@ export const portfolioData = {
   ],
   projects: [
     {
+      title: "MultiTenant Management System (MTMS)",
+      period: "Feb 2026 – Present",
+      image: "/images/mtms-gen.png",
+      description:
+        "Designed and developed a multi-tenant SaaS platform allowing organizations (schools, hospitals, restaurants, etc.) to create their own tenants/domains and manage users, roles, permissions, and workflows. Implemented dynamic RBAC, subscription management, Razorpay integration, and real-time notifications.",
+      github: "https://github.com/nitinchauhan2024/MTMS",
+      liveUrl: "https://multitenant-admin.vercel.app/dashboard",
+      technologies: [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "AWS",
+        "Socket.io",
+        "Razorpay",
+      ],
+    },
+    {
       title: "Swad of Grandma – Food Delivery",
       period: "2026 – Present",
       image: "/images/swado-grandma.png",
       description:
         "Real-time food delivery web application managing the complete order lifecycle. Features secure RBAC for Admin, Customer, and Delivery Partners, live location tracking via WebSockets, and WhatsApp notifications. Deployed a scalable backend on Render.",
       github: "https://github.com/supernitin06",
-      liveUrl: "https://restro-83kb.vercel.app/login",
       technologies: [
         "Node.js",
         "Express.js",
@@ -108,24 +125,6 @@ export const portfolioData = {
         "Redux",
         "Socket.IO",
         "AWS",
-      ],
-    },
-    {
-      title: "MultiTenant Management System (MTMS)",
-      period: "Feb 2026 – Present",
-      image: "/images/mtms-gen.png",
-      description:
-        "Designed and developed a multi-tenant SaaS platform allowing organizations (schools, hospitals, restaurants, etc.) to create their own tenants/domains and manage users, roles, permissions, and workflows. Implemented dynamic RBAC, subscription management, Razorpay integration, and real-time notifications.",
-      github: "https://github.com/nitinchauhan2024/MTMS",
-      liveUrl: "https://multitenant-admin.vercel.app/dashboard",
-      technologies: [
-        "React.js",
-        "Next.js",
-        "Node.js",
-        "PostgreSQL",
-        "AWS",
-        "Socket.io",
-        "Razorpay",
       ],
     },
     {
@@ -180,8 +179,6 @@ export const portfolioData = {
     { name: "SPFx", icon: "spfx" },
     { name: "Power Automate", icon: "powerautomate" },
     { name: "Azure", icon: "azure" },
-    { name: "Redis", icon: "redis" },
-    { name: "Docker", icon: "docker" },
   ],
   certifications: ["NPTEL Software Testing", "Full Stack Development (MERN)"],
   achievements: [
@@ -222,7 +219,7 @@ export const portfolioData = {
   faqs: [
     {
       question: "What technologies do you specialize in?",
-      answer: "I specialize in the MERN stack, Next.js, TypeScript, and enterprise Microsoft 365 solutions including SharePoint (SPFx), Power Automate, PnP PowerShell, and Azure. I also have strong experience with AWS, Docker, PostgreSQL, and Redis.",
+      answer: "I specialize in the MERN stack, Next.js, TypeScript, and enterprise Microsoft 365 solutions including SharePoint (SPFx), Power Automate, PnP PowerShell, and Azure. I also have strong experience with AWS, PostgreSQL, and MongoDB.",
     },
     {
       question: "Are you available for freelance work?",

@@ -39,14 +39,6 @@ const skillsDatabase: Record<string, SkillMeta> = {
   git: { name: "Git & GitHub", icon: "📦", category: "cloud", proficiency: 95, level: "EXPERT", theme: "green", specialty: "Version Control & GitOps" },
 };
 
-const categoryTabs = [
-  { id: "all", label: "All Technologies", count: 18, icon: Sparkles, color: "text-[#FB4D03] border-[#FB4D03]/40 bg-[#FB4D03]/10" },
-  { id: "m365", label: "Microsoft 365 & SharePoint", count: 4, icon: Wind, color: "text-purple-400 border-purple-500/40 bg-purple-500/10" },
-  { id: "frontend", label: "Frontend Architecture", count: 6, icon: Zap, color: "text-cyan-400 border-cyan-500/40 bg-cyan-500/10" },
-  { id: "backend", label: "Backend & Databases", count: 5, icon: Flame, color: "text-amber-400 border-amber-500/40 bg-amber-500/10" },
-  { id: "cloud", label: "Cloud & DevOps", count: 3, icon: Shield, color: "text-emerald-400 border-emerald-500/40 bg-emerald-500/10" },
-];
-
 export function Skills() {
   const sectionRef = useRef<HTMLElement>(null);
   const [activeTab, setActiveTab] = useState<string>("all");
@@ -86,14 +78,23 @@ export function Skills() {
     return { ...s, ...meta };
   });
 
+  const categoryTabs = [
+    { id: "all", label: "All Technologies", count: allSkillsList.length, icon: Sparkles, color: "text-[#FB4D03] border-[#FB4D03]/40 bg-[#FB4D03]/10" },
+    { id: "m365", label: "Microsoft 365 & SharePoint", count: allSkillsList.filter((s) => s.category === "m365").length, icon: Wind, color: "text-purple-400 border-purple-500/40 bg-purple-500/10" },
+    { id: "frontend", label: "Frontend Architecture", count: allSkillsList.filter((s) => s.category === "frontend").length, icon: Zap, color: "text-cyan-400 border-cyan-500/40 bg-cyan-500/10" },
+    { id: "backend", label: "Backend & Databases", count: allSkillsList.filter((s) => s.category === "backend").length, icon: Flame, color: "text-amber-400 border-amber-500/40 bg-amber-500/10" },
+    { id: "cloud", label: "Cloud & DevOps", count: allSkillsList.filter((s) => s.category === "cloud").length, icon: Shield, color: "text-emerald-400 border-emerald-500/40 bg-emerald-500/10" },
+  ];
+
   const filteredSkills =
     activeTab === "all"
       ? allSkillsList
       : allSkillsList.filter((s) => s.category === activeTab);
 
-  // Split into 2 rows for infinite ticker
-  const tickerRow1 = allSkillsList.slice(0, 9);
-  const tickerRow2 = allSkillsList.slice(9);
+  // Split evenly into 2 rows for infinite ticker
+  const half = Math.ceil(allSkillsList.length / 2);
+  const tickerRow1 = allSkillsList.slice(0, half);
+  const tickerRow2 = allSkillsList.slice(half);
 
   return (
     <section
@@ -300,7 +301,7 @@ export function Skills() {
             {
               num: "30%+",
               label: "API Performance Gains",
-              sub: "Redis & Query Tuning",
+              sub: "Caching & Query Tuning",
               icon: "⚡",
             },
             {
